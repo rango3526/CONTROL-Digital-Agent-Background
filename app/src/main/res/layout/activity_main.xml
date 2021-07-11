@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"/>
+
+            <ImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="215dp"
+                android:layout_height="255dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/emma" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hello, I'm your digital companion!"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/viewLessons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/deep_blue"
+                android:text="View lessons" />
+
+<!--            <Button-->
+<!--                android:id="@+id/beginAnalyzingNewPhotos"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="@color/deep_blue"-->
+<!--                android:text="Begin analyzing new photos"-->
+<!--                android:visibility="gone" />-->
+
+
+            <Button
+                android:id="@+id/forgetLessons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/deep_blue"
+                android:text="Forget all lessons" />
+
+            <Button
+                android:id="@+id/changeAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/deep_blue"
+                android:text="Change avatar"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/stopAnalyzing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/deep_blue"
+                android:text="Stop Refreshing in Background"
+                android:visibility="gone"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"
+        android:id="@+id/nav_menu"
+        android:layout_gravity="start"/>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
